@@ -21,6 +21,15 @@
         }
     },
     "verboseMode": false,
-    "aliases": [],
+    "aliases": [
+        {
+            "name": "test",
+            "command": "cls; dotnet build && .\\testingLibs\\FeldSpar.ContinuousIntegration.exe -a C:\\Development\\Personal\\jekyll-post-manager\\Tests\\bin\\Debug\\net7.0\\PostMaster.Tests.dll -v max -ur && gittey push"
+        },
+        {
+            "name": "push",
+            "command": "gittey commit && git pull && git push"
+        }
+    ],
     "collaborators": []
 }

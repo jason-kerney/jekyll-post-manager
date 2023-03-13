@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PostMaster.Lib", "Lib\PostMaster.Lib.fsproj", "{856F3E6C-EB3C-480B-ACB1-89EEC902E439}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PostMaster.Tests", "Tests\PostMaster.Tests.fsproj", "{4996E316-A86A-4AE5-BB4B-8C6145E9B392}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{856F3E6C-EB3C-480B-ACB1-89EEC902E439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{856F3E6C-EB3C-480B-ACB1-89EEC902E439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{856F3E6C-EB3C-480B-ACB1-89EEC902E439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{856F3E6C-EB3C-480B-ACB1-89EEC902E439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3475A5B5-0C5E-40D8-9CFE-4F64F312E3CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3475A5B5-0C5E-40D8-9CFE-4F64F312E3CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3475A5B5-0C5E-40D8-9CFE-4F64F312E3CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3475A5B5-0C5E-40D8-9CFE-4F64F312E3CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4996E316-A86A-4AE5-BB4B-8C6145E9B392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4996E316-A86A-4AE5-BB4B-8C6145E9B392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4996E316-A86A-4AE5-BB4B-8C6145E9B392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4996E316-A86A-4AE5-BB4B-8C6145E9B392}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
