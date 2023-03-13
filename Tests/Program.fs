@@ -6,7 +6,11 @@ open FeldSpar.Framework.Verification.ApprovalsSupport
 open ApprovalTests
 
 module Program =
-    
+    let any values =
+        match values with
+        | [] -> false
+        | _ -> true
+        
     //let ``Setup Global Reports`` = 
     let Setup_Global_Reports = 
         Config(fun () -> 
@@ -42,8 +46,23 @@ module Program =
             member this.GetExportedTypes () = assembly.GetExportedTypes()
         }
 
-    runAndReportFailure UseAssemblyConfiguration ShowDetails currentToken |> ignore
+    let framework, results = runAndReportFailure UseAssemblyConfiguration ShowDetails currentToken
+    let successes = results |> List.filter (fun item -> item.TestResults = Success)
+    let failures = results |> List.filter (fun item -> item.TestResults = Success |> not)
 
+    printfn $"running %s{framework}"    
+
+    failures
+    |> List.iter (fun item ->
+        printfn $"\t Test: (%A{item.TestResults}) %s{item.TestContainerName} %s{item.TestName}"
+    )
+    
+    if failures |> any
+    then printfn ""
+    
+    successes
+    |> List.iter (fun item ->
+        printfn $"\t Test: (%A{item.TestResults}) %s{item.TestContainerName} %s{item.TestName}"
+    )
+    
     printf "\nDone!"
-
-    //System.Console.ReadKey true |> ignore
