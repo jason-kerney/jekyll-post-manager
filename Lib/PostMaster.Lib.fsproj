@@ -7,7 +7,9 @@
 
   <ItemGroup>
     <Compile Include="Types.fs" />
+    <Compile Include="Helpers.fs" />
     <Compile Include="FileNameParser.fs" />
+    <Compile Include="YamlParser.fs" />
   </ItemGroup>
 
 </Project>

@@ -2,7 +2,17 @@
 
 open System
 
-type NameInfo = {
+type FileNameInfo = {
     Id: string
     Date: DateOnly
+}
+
+type YamlNameInfo = {
+    Id: string
+    DateTime: DateTime
+}
+
+type YamlSegment = {
+    Id: string
+    Value: string
 }

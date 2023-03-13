@@ -6,6 +6,7 @@ open FeldSpar.Framework.Verification.ApprovalsSupport
 open ApprovalTests
 
 module Program =
+      
     let any values =
         match values with
         | [] -> false
@@ -54,7 +55,7 @@ module Program =
 
     failures
     |> List.iter (fun item ->
-        printfn $"\t Test: (%A{item.TestResults}) %s{item.TestContainerName} %s{item.TestName}"
+        printfn $"\t Test: (Failure) %s{item.TestContainerName} %s{item.TestName}"
     )
     
     if failures |> any
@@ -62,7 +63,9 @@ module Program =
     
     successes
     |> List.iter (fun item ->
-        printfn $"\t Test: (%A{item.TestResults}) %s{item.TestContainerName} %s{item.TestName}"
+        printfn $"\t Test: (Success) %s{item.TestContainerName} %s{item.TestName}"
     )
     
     printf "\nDone!"
+    
+    failures |> List.length |> exit
