@@ -24,7 +24,7 @@
     "aliases": [
         {
             "name": "test",
-            "command": "cls; dotnet build && .\\testingLibs\\FeldSpar.ContinuousIntegration.exe -a C:\\Development\\Personal\\jekyll-post-manager\\Tests\\bin\\Debug\\net7.0\\PostMaster.Tests.dll -v max -ur && gittey push"
+            "command": "cls; dotnet build && dotnet run --project ./Tests/ && gittey push"
         },
         {
             "name": "push",
